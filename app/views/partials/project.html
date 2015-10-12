@@ -1,0 +1,22 @@
+<div id="ajax-loader" ng-if="!ajaxLoader">
+    <img src="images/ajax-loader.gif" class="ajax-loader" alt="">
+</div>
+
+<div class="row">
+  <div class="col-md-4" ng-repeat="project in projects">
+    <div class="project-card" >
+      <div class="title">
+        {{project.title}}
+        <span class="glyphicon glyphicon-remove project-remove" ng-click="removeProject(project.$id)"></span>
+      </div>
+      <div class="description">{{project.description}}</div>
+      <div ng-repeat="task in project.tasks">
+        <tasks></tasks>
+      </div>
+      <div class="form-inline task-add-form" >
+        <label for="taskText">Enter task</label>
+        <input type="text" id="taskText" class="form-control" ng-model="newTask.text">  <button class="btn btn-info" ng-click="addTask(project.$id, newTask)">Add task</button>
+      </div>
+    </div>
+  </div>
+</div>

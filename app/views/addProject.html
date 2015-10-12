@@ -1,0 +1,13 @@
+<div class="alert alert-success" role="alert" ng-if="createSuccessfully">
+ <strong>Well done!</strong> New project was create successfully
+</div>
+<div class="form-group">
+  <label for="nameProject">Project name</label>
+  <input class="form-control" type="text" ng-model="newProject.name">
+</div>
+<div class="form-group">
+  <label for="descriptionProject">Project description </label>
+  <textarea class="form-control" ng-model="newProject.description" cols="30" rows="10"></textarea>
+</div>
+
+<button class="btn btn-default" ng-click="addNewProject(newProject)">Add new project</button>

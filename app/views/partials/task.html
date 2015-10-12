@@ -1,0 +1,5 @@
+<div class="task" ng-class="{'done': done}">
+  <div><input type="checkbox" ng-checked="task.done" ng-init="done = task.done" ng-model="done" ng-change="taskStatus(project.$id, task.id, done)"></div>
+  <div class="text-task">{{task.text}}</div>
+  <div><span class="glyphicon glyphicon-remove task-remove" ng-click="removeTask(project.$id, task.id)"></span></div>
+</div>

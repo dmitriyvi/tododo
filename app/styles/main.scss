@@ -1,0 +1,63 @@
+@import "project";
+
+.gray-box {
+  background-color: #CCCCCC;
+  margin: 40px;
+  padding: 15px;
+
+  .header {
+    .logo-top {
+      text-align: center;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #333333;
+
+      .logo-top-title {
+        font-family: serif;
+        font-weight: 100;
+        color: #666666;
+        text-transform: none;
+        font-style: italic;
+        font-size: 25px;
+      }
+    }
+
+    ul.top-menu {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 15px;
+        border-radius: 5px;
+        padding: 10px 0px;
+
+        &:hover {
+          background-color: #006699;
+        }
+
+        &:hover a {
+          color: white;
+        }
+
+        &.active {
+          background-color: #006699;
+
+          a {
+            color: white;
+          }
+        }
+
+        a {
+          padding: 10px 15px;
+          text-decoration: none;
+          color: #006699;
+        }
+      }
+    }
+  }
+}
